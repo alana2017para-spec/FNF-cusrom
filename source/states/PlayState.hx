@@ -86,7 +86,8 @@ class PlayState extends MusicBeatState
 		['Good', 0.8], //From 70% to 79%
 		['Great', 0.9], //From 80% to 89%
 		['Sick!', 1], //From 90% to 99%
-		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['Perfect!!', 1]
+		['ultra perfect!!', 1.5]//The value on this one isn't used actually, since Perfect is always "1"
 	];
 
 	//event variables
@@ -109,7 +110,7 @@ class PlayState extends MusicBeatState
 
 	public var songSpeedTween:FlxTween;
 	public var songSpeed(default, set):Float = 1;
-	public var songSpeedType:String = "multiplicative";
+	public var songSpeedType:String = "multi";
 	public var noteKillOffset:Float = 350;
 
 	public var playbackRate(default, set):Float = 1;
