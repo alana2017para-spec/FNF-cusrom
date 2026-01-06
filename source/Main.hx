@@ -53,9 +53,9 @@ class Main extends Sprite
 		width: 1280, // WINDOW width
 		height: 720, // WINDOW height
 		initialState: TitleState, // initial game state
-		framerate: 60, // default framerate
+		framerate: 240, // default framerate
 		skipSplash: true, // if the default flixel splash screen should be skipped
-		startFullscreen: false // if the game should start at fullscreen mode
+		startFullscreen: true // if the game should start at fullscreen mode
 	};
 
 	public static var fpsVar:FPSCounter;
@@ -222,7 +222,7 @@ class Main extends Sprite
 		dateNow = dateNow.replace(" ", "_");
 		dateNow = dateNow.replace(":", "'");
 
-		path = "./crash/" + "PsychEngine_" + dateNow + ".txt";
+		path = "./crashed/" + "ExpungedEngine_" + dateNow + ".txt";
 
 		for (stackItem in callStack)
 		{
@@ -241,10 +241,10 @@ class Main extends Sprite
 		#if officialBuild
 		errMsg += "\nPlease report this error to the GitHub page: https://github.com/ShadowMario/FNF-PsychEngine";
 		#end
-		errMsg += "\n\n> Crash Handler written by: sqirra-rng";
+		errMsg += "\n\n> Crash Handler written by: expunged";
 
-		if (!FileSystem.exists("./crash/"))
-			FileSystem.createDirectory("./crash/");
+		if (!FileSystem.exists("./crashed/"))
+			FileSystem.createDirectory("./crashed/");
 
 		File.saveContent(path, errMsg + "\n");
 
