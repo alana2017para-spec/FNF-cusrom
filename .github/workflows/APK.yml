@@ -2,7 +2,7 @@ name: Build Psych Engine 1.0.4 Android APK
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, experimental ]
   workflow_dispatch:  # permite rodar manual
 
 jobs:
