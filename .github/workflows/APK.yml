@@ -13,7 +13,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       with:
-        ref: 1.0.4
+        ref: main
         fetch-depth: 0
 
     - name: Install Haxe 4.3.2
