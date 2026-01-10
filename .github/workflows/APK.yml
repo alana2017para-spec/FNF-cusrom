@@ -34,7 +34,7 @@ jobs:
   build:
     name: Build
     needs: create-nightly-tag
-    uses: ./.github/workflows/mobile.yml
+    uses: ./.github/workflows/APK.yml
     with:
       buildFlags: officialBuild
 
